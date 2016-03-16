@@ -75,6 +75,21 @@ Route::group(['middleware' => ['web']], function () {
             'uses' => 'PostController@postCreatePost',
             'as' => 'admin.blog.post.create'
         ]);
+        
+        Route::get('/blog/post/{post_id}/edit', [
+            'uses' => 'PostController@getUpdatePost',
+            'as' => 'admin.blog.post.edit'    
+        ]);
+        
+        Route::post('/blog/post/update', [
+            'uses' => 'PostController@postUpdatePost',
+            'as' => 'admin.blog.post.update'    
+        ]);
+        
+        Route::get('/blog/post/{post_id}/delete', [
+            'uses' => 'PostController@getDeletePost',
+            'as' => 'admin.blog.post.delete'    
+        ]);
     });
     
 });
