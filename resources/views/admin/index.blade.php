@@ -30,6 +30,7 @@
                                 </div>
                                 <div class="edit">
                                     <ul>
+                                        <!-- {{ route('admin.blog.index', ['post_id' => $post->id, 'end' => 'admin']) }} -->
                                         <li><a href="">View Post</a></li>
                                         <li><a href="">Edit</a></li>
                                         <li><a href="" class="danger">Delete</a></li>
