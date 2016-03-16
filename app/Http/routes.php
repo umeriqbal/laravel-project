@@ -41,8 +41,11 @@ Route::group(['middleware' => ['web']], function () {
     /** Other Routes **/
     Route::get('/about', function(){
         return view('frontend.other.about');
-    });
-   
-   Route
+    })->name('about');
+    
+    Route::get('/contact', [
+        'uses' => 'ContactMessageController@getContactIndex',
+        'as' => 'contact'    
+    ]);
     
 });

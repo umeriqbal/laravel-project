@@ -6,7 +6,7 @@
 
 @section('styles')
     <link rel="stylesheet" href="{{ URL::to('src/css/form.css') }}" type="text/css" />
-$endsection
+@endsection
 
 @section('content')
     @include('includes.info-box')
