@@ -46,6 +46,17 @@ class CategoryController extends Controller
         $category->update();
         
         return Response::json(['message' =>  'Category updated'], 200);
+    }
+    
+    public function getDeleteCategory($category_id)
+    {
+        $category = Category::find($category_id);
+        if (!$category)
+        {
+            return Response::json(['message' => 'Category not found.'], 404);
+        }
         
+        $category->delete();
+        return Response::json(['message' =>  'Category deleted.'], 200);
     }
 }
