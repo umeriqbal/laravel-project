@@ -32,9 +32,9 @@ function addCategoryToPost(event){
     }
     
     if (addedCategoriesIDs.value.length > 0){
-        addedCategoriesIDs.value = addedCategoriesIDs + ',' + selectedCategoryId;
+        addedCategoriesIDs.value = addedCategoriesIDs.value + ',' + selectedCategoryId;
     } else {
-        addedCategoriesIDs = selectedCategoryId;
+        addedCategoriesIDs.value = selectedCategoryId;
     }
     
     var newCategoryLi = document.createElement('li');
@@ -51,7 +51,6 @@ function addCategoryToPost(event){
 function removeCategoryFromPost(event){
     event.preventDefault();
     
-    addedCategoriesIDs = document.getElementById('categories');
     event.target.removeEventListener('click', removeCategoryFromPost);
     var categoryId = event.target.dataset['category_id'];
     var categoryIDArray = addedCategoriesIDs.value.split(',');
