@@ -58,7 +58,7 @@
                     
                     @foreach($contact_messages as $contact_message)
                     <li>
-                        <article data-message="{{ $contact_message->body }}" data-id="{{ $contact_message->id }}">
+                        <article data-message="{{ $contact_message->body }}" data-id="{{ $contact_message->id }}" class="contact-message">
                             <div class="post-info">
                                 <h3>{{ $contact_message->subject }}</h3>
                                 <span class="info">{{ $contact_message->sender }}: ... | {{ $contact_message->created_at }}</span>

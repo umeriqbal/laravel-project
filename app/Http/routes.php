@@ -120,6 +120,11 @@ Route::group(['middleware' => ['web']], function () {
             'uses' => 'ContactMessageController@getContactMessageIndex',
             'as' => 'admin.contact.index'
         ]);
+        
+        Route::get('/contact/message/{message_id}/delete', [
+            'uses' => 'ContactMessageController@getDeleteMessage',
+            'as' => 'admin.contact.delete'
+        ]);
     });
     
 });
