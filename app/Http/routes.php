@@ -86,6 +86,11 @@ Route::group(['middleware' => ['web']], function () {
             'as' => 'admin.blog.category.create'
         ]);
         
+        Route::post('/blog/categories/update', [
+            'uses' => 'CategoryController@postUpdateCategory',
+            'as' => 'admin.blog.category.update'
+        ]);
+        
         Route::get('/blog/post/{post_id}/edit', [
             'uses' => 'PostController@getUpdatePost',
             'as' => 'admin.blog.post.edit'    
